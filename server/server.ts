@@ -7,6 +7,7 @@ import dns from "dns";
 import authRouter from "./routes/authRoute.js";
 import restaurantRouter from "./routes/restaurantRoutes.js";
 import bookingRouter from "./routes/bookingRoutes.js";
+import ownerRouter from "./routes/ownerRoutes.js";
 
 
 dns.setServers(["1.1.1.1","8.8.8.8"]);
@@ -25,6 +26,7 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/api/auth",authRouter)
 app.use("/api/restaurants",restaurantRouter)
 app.use("/api/bookings", bookingRouter);
+app.use("/api/owners", ownerRouter);
 
 // Global Error Handler
 app.use((err:Error, req:Request, res:Response, next:NextFunction)=>{
