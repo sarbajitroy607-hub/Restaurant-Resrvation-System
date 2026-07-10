@@ -6,6 +6,9 @@ import connectDB from "./config/db.js";
 import dns from "dns";
 import authRouter from "./routes/authRoute.js";
 import restaurantRouter from "./routes/restaurantRoutes.js";
+import bookingRouter from "./routes/bookingRoutes.js";
+
+
 dns.setServers(["1.1.1.1","8.8.8.8"]);
 
 const app = express();
@@ -21,6 +24,7 @@ app.get("/", (req: Request, res: Response) => {
 
 app.use("/api/auth",authRouter)
 app.use("/api/restaurants",restaurantRouter)
+app.use("/api/bookings", bookingRouter);
 
 // Global Error Handler
 app.use((err:Error, req:Request, res:Response, next:NextFunction)=>{
