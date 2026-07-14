@@ -1,7 +1,6 @@
 import { Response } from "express";
 import { AuthRequest } from "../middlewares/auth.js";
 import { Restaurant } from "../models/Restaurant.js";
-import { create } from "node:domain";
 import { Booking } from "../models/Booking.js";
 import { User } from "../models/user.js";
 
@@ -66,8 +65,8 @@ export const getAdminStats = async (req: AuthRequest, res: Response): Promise<vo
     try {
         const totalUsers = await User.countDocuments({ role: "user" });
         const totalOwners = await User.countDocuments({ role: "owner" });
-        const totalBookings = await Booking.countDocuments({ role: "booking" });
-        const totalRestaurants = await Restaurant.countDocuments({ role: "restaurant" });
+        const totalBookings = await Booking.countDocuments();
+        const totalRestaurants = await Restaurant.countDocuments();
 
         // Get latest 10 bookings
         const latestBookings = await Booking.find({}).sort({ createdAt: -1 }).limit(10).populate("user", "name email").populate("restaurant", "name");

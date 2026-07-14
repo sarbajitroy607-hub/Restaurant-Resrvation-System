@@ -32,7 +32,7 @@ export const registerUser = async (
     try {
         const { name, email, password, phone, role } = req.body;
 
-        if (!name || !email || !password || !phone || !role) {
+        if (!name || !email || !password) {
             res.status(400).json({
                 message: "Please enter all required fields"
             });
@@ -59,7 +59,7 @@ export const registerUser = async (
             email,
             password: hashedPassword,
             phone,
-            role
+            role: role || "user",
         });
 
 

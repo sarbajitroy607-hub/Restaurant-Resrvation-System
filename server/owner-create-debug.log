@@ -1,0 +1,426 @@
+
+---
+2026-07-14T11:56:50.263Z
+headers:
+{
+  "host": "localhost:5000",
+  "connection": "keep-alive",
+  "content-length": "61566",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTYyMzQ3NTAxYzViMWE5NjE5YTQyNSIsImlhdCI6MTc4NDAzMDAyMywiZXhwIjoxNzg2NjIyMDIzfQ.JuTnyzBCyZaQvFk3r6wXW06yi9aPyITKNR8r5K2riOs",
+  "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Microsoft Edge\";v=\"150\"",
+  "sec-ch-ua-mobile": "?0",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "dnt": "1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryUxULInUevBFHZ4BH",
+  "origin": "http://localhost:5173",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:5173/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9,en-IN;q=0.8"
+}
+body keys:name,description,cuisine,priceRange,location,address,chef,tags,availableSlots,totalSeats
+body:
+{
+  "name": "Exprasso",
+  "description": "newly opened restaurant",
+  "cuisine": "French",
+  "priceRange": "$$",
+  "location": "Bangalore",
+  "address": "Whitefield, Bengalore",
+  "chef": "Jean-K",
+  "tags": "Rootop,Romantic",
+  "availableSlots": "20:00,20:30,21:00,21:30",
+  "totalSeats": "20"
+}
+file:{
+  "originalname": "restaurant picture.jpg",
+  "mimetype": "image/jpeg",
+  "size": 60305
+}
+
+---
+2026-07-14T12:12:46.445Z
+headers:
+{
+  "host": "localhost:5000",
+  "connection": "keep-alive",
+  "content-length": "61566",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTYyMzQ3NTAxYzViMWE5NjE5YTQyNSIsImlhdCI6MTc4NDAzMDAyMywiZXhwIjoxNzg2NjIyMDIzfQ.JuTnyzBCyZaQvFk3r6wXW06yi9aPyITKNR8r5K2riOs",
+  "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Microsoft Edge\";v=\"150\"",
+  "sec-ch-ua-mobile": "?0",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "dnt": "1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryg98Gd7Fro8vilSCg",
+  "origin": "http://localhost:5173",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:5173/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9,en-IN;q=0.8"
+}
+body keys:name,description,cuisine,priceRange,location,address,chef,tags,availableSlots,totalSeats
+body:
+{
+  "name": "Exprasso",
+  "description": "newly opened restaurant",
+  "cuisine": "French",
+  "priceRange": "$$",
+  "location": "Bangalore",
+  "address": "Whitefield, Bengalore",
+  "chef": "Jean-K",
+  "tags": "Rootop,Romantic",
+  "availableSlots": "20:00,20:30,21:00,21:30",
+  "totalSeats": "20"
+}
+file:{
+  "originalname": "restaurant picture.jpg",
+  "mimetype": "image/jpeg",
+  "size": 60305
+}
+
+---
+2026-07-14T12:13:10.489Z
+headers:
+{
+  "host": "localhost:5000",
+  "connection": "keep-alive",
+  "content-length": "61566",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTYyMzQ3NTAxYzViMWE5NjE5YTQyNSIsImlhdCI6MTc4NDAzMDAyMywiZXhwIjoxNzg2NjIyMDIzfQ.JuTnyzBCyZaQvFk3r6wXW06yi9aPyITKNR8r5K2riOs",
+  "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Microsoft Edge\";v=\"150\"",
+  "sec-ch-ua-mobile": "?0",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "dnt": "1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryovjCDqvERH4yUuua",
+  "origin": "http://localhost:5173",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:5173/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9,en-IN;q=0.8"
+}
+body keys:name,description,cuisine,priceRange,location,address,chef,tags,availableSlots,totalSeats
+body:
+{
+  "name": "Exprasso",
+  "description": "newly opened restaurant",
+  "cuisine": "French",
+  "priceRange": "$$",
+  "location": "Bangalore",
+  "address": "Whitefield, Bengalore",
+  "chef": "Jean-K",
+  "tags": "Rootop,Romantic",
+  "availableSlots": "20:00,20:30,21:00,21:30",
+  "totalSeats": "20"
+}
+file:{
+  "originalname": "restaurant picture.jpg",
+  "mimetype": "image/jpeg",
+  "size": 60305
+}
+
+---
+2026-07-14T12:13:36.167Z
+headers:
+{
+  "host": "localhost:5000",
+  "connection": "keep-alive",
+  "content-length": "61566",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTYyMzQ3NTAxYzViMWE5NjE5YTQyNSIsImlhdCI6MTc4NDAzMDAyMywiZXhwIjoxNzg2NjIyMDIzfQ.JuTnyzBCyZaQvFk3r6wXW06yi9aPyITKNR8r5K2riOs",
+  "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Microsoft Edge\";v=\"150\"",
+  "sec-ch-ua-mobile": "?0",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "dnt": "1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryEQOiKBzOrQe0x5ke",
+  "origin": "http://localhost:5173",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:5173/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9,en-IN;q=0.8"
+}
+body keys:name,description,cuisine,priceRange,location,address,chef,tags,availableSlots,totalSeats
+body:
+{
+  "name": "Exprasso",
+  "description": "newly opened restaurant",
+  "cuisine": "French",
+  "priceRange": "$$",
+  "location": "Bangalore",
+  "address": "Whitefield, Bengalore",
+  "chef": "Jean-K",
+  "tags": "Rootop,Romantic",
+  "availableSlots": "20:00,20:30,21:00,21:30",
+  "totalSeats": "20"
+}
+file:{
+  "originalname": "restaurant picture.jpg",
+  "mimetype": "image/jpeg",
+  "size": 60305
+}
+
+---
+2026-07-14T16:47:18.128Z
+headers:
+{
+  "host": "localhost:5000",
+  "connection": "keep-alive",
+  "content-length": "61555",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTYyMzQ3NTAxYzViMWE5NjE5YTQyNSIsImlhdCI6MTc4NDAzMDAyMywiZXhwIjoxNzg2NjIyMDIzfQ.JuTnyzBCyZaQvFk3r6wXW06yi9aPyITKNR8r5K2riOs",
+  "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Microsoft Edge\";v=\"150\"",
+  "sec-ch-ua-mobile": "?0",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "dnt": "1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryQgBVPWVyAninCDvr",
+  "origin": "http://localhost:5173",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:5173/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9,en-IN;q=0.8"
+}
+body keys:name,description,cuisine,priceRange,location,address,chef,tags,availableSlots,totalSeats
+body:
+{
+  "name": "expraso'sfe",
+  "description": "newly opened   Rastaurant",
+  "cuisine": "French",
+  "priceRange": "$$",
+  "location": "Bangalore",
+  "address": "Whitefield",
+  "chef": "Jean-K",
+  "tags": "Rooftop,Romantic",
+  "availableSlots": "20:30,21:00,21:30",
+  "totalSeats": "20"
+}
+file:{
+  "originalname": "restaurant picture.jpg",
+  "mimetype": "image/jpeg",
+  "size": 60305
+}
+
+---
+2026-07-14T16:49:43.233Z
+headers:
+{
+  "host": "localhost:5000",
+  "connection": "keep-alive",
+  "content-length": "1009457",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTYyMzQ3NTAxYzViMWE5NjE5YTQyNSIsImlhdCI6MTc4NDAzMDAyMywiZXhwIjoxNzg2NjIyMDIzfQ.JuTnyzBCyZaQvFk3r6wXW06yi9aPyITKNR8r5K2riOs",
+  "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Microsoft Edge\";v=\"150\"",
+  "sec-ch-ua-mobile": "?0",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "dnt": "1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundarywZmk8JzeAAVS02Zs",
+  "origin": "http://localhost:5173",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:5173/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9,en-IN;q=0.8"
+}
+body keys:name,description,cuisine,priceRange,location,address,chef,tags,availableSlots,totalSeats
+body:
+{
+  "name": "expraso'sfe",
+  "description": "newly opened   Rastaurant",
+  "cuisine": "French",
+  "priceRange": "$$$",
+  "location": "Bangalore",
+  "address": "Whitefield",
+  "chef": "Jean-K",
+  "tags": "Rooftop,Romantic",
+  "availableSlots": "20:30,21:00,21:30",
+  "totalSeats": "20"
+}
+file:{
+  "originalname": "restaurant-pic 2.jpg",
+  "mimetype": "image/jpeg",
+  "size": 1008208
+}
+
+---
+2026-07-14T17:29:50.486Z
+headers:
+{
+  "host": "localhost:5000",
+  "connection": "keep-alive",
+  "content-length": "1009506",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTYyMzQ3NTAxYzViMWE5NjE5YTQyNSIsImlhdCI6MTc4NDAzMDAyMywiZXhwIjoxNzg2NjIyMDIzfQ.JuTnyzBCyZaQvFk3r6wXW06yi9aPyITKNR8r5K2riOs",
+  "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Microsoft Edge\";v=\"150\"",
+  "sec-ch-ua-mobile": "?0",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "dnt": "1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryRUI7clX2Tirk32hN",
+  "origin": "http://localhost:5173",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:5173/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9,en-IN;q=0.8"
+}
+body keys:name,description,cuisine,priceRange,location,address,chef,tags,availableSlots,totalSeats
+body:
+{
+  "name": "Expresso's",
+  "description": "newly opened  in the  restaurant",
+  "cuisine": "French",
+  "priceRange": "$$",
+  "location": "allo nagar",
+  "address": "bangalore whitefield",
+  "chef": "jean-K",
+  "tags": "rooftop",
+  "availableSlots": "17:00,17:30,18:00,18:30,19:00,19:30,20:00,20:30,21:00,21:30",
+  "totalSeats": "20"
+}
+file:{
+  "originalname": "restaurant-pic 2.jpg",
+  "mimetype": "image/jpeg",
+  "size": 1008208
+}
+
+---
+2026-07-14T17:31:19.491Z
+headers:
+{
+  "host": "localhost:5000",
+  "connection": "keep-alive",
+  "content-length": "1009506",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTYyMzQ3NTAxYzViMWE5NjE5YTQyNSIsImlhdCI6MTc4NDAzMDAyMywiZXhwIjoxNzg2NjIyMDIzfQ.JuTnyzBCyZaQvFk3r6wXW06yi9aPyITKNR8r5K2riOs",
+  "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Microsoft Edge\";v=\"150\"",
+  "sec-ch-ua-mobile": "?0",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "dnt": "1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundarySdqkrPca1GtdIXuu",
+  "origin": "http://localhost:5173",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:5173/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9,en-IN;q=0.8"
+}
+body keys:name,description,cuisine,priceRange,location,address,chef,tags,availableSlots,totalSeats
+body:
+{
+  "name": "Expresso's",
+  "description": "newly opened  in the  restaurant",
+  "cuisine": "French",
+  "priceRange": "$$",
+  "location": "allo nagar",
+  "address": "bangalore whitefield",
+  "chef": "jean-K",
+  "tags": "rooftop",
+  "availableSlots": "17:00,17:30,18:00,18:30,19:00,19:30,20:00,20:30,21:00,21:30",
+  "totalSeats": "20"
+}
+file:{
+  "originalname": "restaurant-pic 2.jpg",
+  "mimetype": "image/jpeg",
+  "size": 1008208
+}
+
+---
+2026-07-14T17:43:57.877Z
+headers:
+{
+  "host": "localhost:5000",
+  "connection": "keep-alive",
+  "content-length": "1009506",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTYyMzQ3NTAxYzViMWE5NjE5YTQyNSIsImlhdCI6MTc4NDAzMDAyMywiZXhwIjoxNzg2NjIyMDIzfQ.JuTnyzBCyZaQvFk3r6wXW06yi9aPyITKNR8r5K2riOs",
+  "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Microsoft Edge\";v=\"150\"",
+  "sec-ch-ua-mobile": "?0",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "dnt": "1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryTA4H3TK9wUnfr1Ba",
+  "origin": "http://localhost:5173",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:5173/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9,en-IN;q=0.8"
+}
+body keys:name,description,cuisine,priceRange,location,address,chef,tags,availableSlots,totalSeats
+body:
+{
+  "name": "Expresso's",
+  "description": "newly opened  in the  restaurant",
+  "cuisine": "French",
+  "priceRange": "$$",
+  "location": "allo nagar",
+  "address": "bangalore whitefield",
+  "chef": "Jean-K",
+  "tags": "rooftop",
+  "availableSlots": "17:00,17:30,18:00,18:30,19:00,19:30,20:00,20:30,21:00,21:30",
+  "totalSeats": "20"
+}
+file:{
+  "originalname": "restaurant-pic 2.jpg",
+  "mimetype": "image/jpeg",
+  "size": 1008208
+}
+
+---
+2026-07-14T18:00:07.513Z
+headers:
+{
+  "host": "localhost:5000",
+  "connection": "keep-alive",
+  "content-length": "1112",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTY3NmRhODdiYjM4ZGQzM2Y5ZDYzNyIsImlhdCI6MTc4NDA1MTQxOCwiZXhwIjoxNzg2NjQzNDE4fQ.Ap8IjuzhgT0b3HFBM1cqxqJGTK9SvZforrH_fwF70Ds",
+  "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Microsoft Edge\";v=\"150\"",
+  "sec-ch-ua-mobile": "?0",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "dnt": "1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundary4BQfAaJnEZL5UU2v",
+  "origin": "http://localhost:5173",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:5173/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9,en-IN;q=0.8"
+}
+body keys:name,description,cuisine,priceRange,location,address,chef,tags,availableSlots,totalSeats
+body:
+{
+  "name": "Astro Hall",
+  "description": "newly opened near 3rd floor",
+  "cuisine": "Japanis",
+  "priceRange": "$$",
+  "location": "bangalore",
+  "address": "WhiteField,Bangalore",
+  "chef": "Jean-K",
+  "tags": "Rooftop",
+  "availableSlots": "19:30,20:00,20:30,21:00,21:30",
+  "totalSeats": "25"
+}
+file:null

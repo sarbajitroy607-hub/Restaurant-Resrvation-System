@@ -6,6 +6,7 @@ import BookingConfirmation from "./pages/BookingConfirmation.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
 import OwnerDashboard from "./pages/owner/OwnerDashboard.tsx";
 import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
+import Credits from "./pages/Credits.tsx";
 import ProtectedRoute from "./components/ProtectedRoute.tsx";
 import { Toaster } from "react-hot-toast";
 
@@ -29,6 +30,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/search" element={<Search />} />
+                <Route path="/credits" element={<Credits />} />
                 <Route path="/restaurant/:slug" element={<RestaurantDetail />} />
                 <Route 
                     path="/booking/:slug" 
@@ -66,4 +68,3 @@ export default function App() {
         </>
     );
 }
-

@@ -14,8 +14,8 @@ ownerRouter.use(ownerOnly);  // Apply the ownerOnly middleware to all routes in 
 ownerRouter.get("/restaurants", getOwnwerRestaurants);
 ownerRouter.post("/restaurants", upload.single("image"), createOwnerRestaurant  );
 ownerRouter.put("/restaurants/:id", upload.single("image"), updateOwnerRestaurant);
-ownerRouter.get("/booking", getOwnerBookings );
-ownerRouter.put("/booking", updateBookingStatus);
+ownerRouter.get("/bookings", getOwnerBookings);
+ownerRouter.put("/bookings/:id/status", updateBookingStatus);
 
 export default ownerRouter;
  

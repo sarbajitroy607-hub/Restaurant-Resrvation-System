@@ -5,11 +5,12 @@ import Footer from "../../components/Footer.tsx";
 import Loader from "../../components/Loader.tsx";
 import { useAppContext } from "../../context/AppContext.tsx";
 import { ShieldCheckIcon, CheckCircleIcon, BarChart3Icon } from "lucide-react";
+import toast from "react-hot-toast";
+import api from "../../lib/api";
 
 // Subcomponents
 import AdminApprovals from "../../components/admin/AdminApprovals.tsx";
 import AdminStats from "../../components/admin/AdminStats.tsx";
-import { dummyAdminStats, dummyRestaurant } from "../../assets/assets.ts";
 
 export default function AdminDashboard() {
     const { logout } = useAppContext();
@@ -20,16 +21,43 @@ export default function AdminDashboard() {
     const [btnLoading, setBtnLoading] = useState<string | null>(null);
 
     const fetchAdminData = async () => {
-        setRestaurants(dummyRestaurant);
-        setStats(dummyAdminStats);
+       try{
+        setLoading(true);
+        const rRes = await api.get("/admin/restaurants");
+        // The API returns { success, data }, so keep only the restaurant list.
+        setRestaurants(Array.isArray(rRes.data?.data) ? rRes.data.data : []);
+
+        const sRes = await api.get("/admin/stats");
+        setStats(sRes.data?.data ?? null);
+
+       } catch (error: any) {
+        toast.error(error?.response?.data?.message || "failed to retrieve the administrator data");
+       } finally {
         setLoading(false);
+       }
+
     };
 
     const handleApproveStatus = async (restaurantId: string, status: "approved" | "rejected") => {
-        console.log(restaurantId, status);
-        setBtnLoading(null);
-    };
+        try {
+            setBtnLoading(restaurantId);
+            await api.put(`/admin/restaurants/${restaurantId}/approve`, { status });
+            toast.success(`Restaurant has been marked as ${status.toUpperCase()}`);
 
+            // reload locallist and stats
+            const rRes = await api.get("/admin/restaurants");
+            setRestaurants(Array.isArray(rRes.data?.data) ? rRes.data.data : []);
+
+            const sRes = await api.get("/admin/stats");
+            setStats(sRes.data?.data ?? null);
+        } catch (error: any) {
+             toast.error(error?.response?.data?.message || "Failed to update restaurant approval status");
+        } finally {
+            setBtnLoading(null);
+        }
+        };
+
+        
     useEffect(() => {
         (async () => await fetchAdminData())();
     }, []);

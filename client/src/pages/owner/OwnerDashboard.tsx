@@ -10,7 +10,8 @@ import PendingApproval from "../../components/owner/PendingApproval.tsx";
 import RequestRejected from "../../components/owner/RequestRejected.tsx";
 import OwnerBookings from "../../components/owner/OwnerBookings.tsx";
 import OwnerProfileDetails from "../../components/owner/OwnerProfileDetails.tsx";
-import { dummyMyBookingsData, dummyRestaurant } from "../../assets/assets.ts";
+import api from "../../lib/api.ts";
+import toast from "react-hot-toast";
 
 export default function OwnerDashboard() {
     const { logout } = useAppContext();
@@ -20,13 +21,43 @@ export default function OwnerDashboard() {
     const [activeTab, setActiveTab] = useState<"bookings" | "details">("bookings");
 
     const fetchOwnerData = async () => {
-        setRestaurant(dummyRestaurant[0]);
-        setBookings(dummyMyBookingsData);
-        setLoading(false);
+        try {
+            setLoading(true);
+            // Fetch restaurant data from API
+            const res = await api.get("/owners/restaurants");
+            setRestaurant(res.data);
+
+            // A bookings error should not make an otherwise loaded dashboard look broken.
+            if (res.data?.status === "approved") {
+                try {
+                    const bookingsRes = await api.get("/owners/bookings");
+                    // Support the current API contract and the previous array
+                    // response while deployments update at different times.
+                    const ownerBookings = Array.isArray(bookingsRes.data)
+                        ? bookingsRes.data
+                        : bookingsRes.data?.bookings;
+
+                    if (!Array.isArray(ownerBookings)) {
+                        throw new Error("Invalid bookings response");
+                    }
+
+                    setBookings(ownerBookings);
+                } catch (error: any) {
+                    setBookings([]);
+                    toast.error(error?.response?.data?.message || "Failed to load bookings");
+                }
+            } else {
+                setBookings([]);
+            }
+        } catch (error: any) {
+            toast.error(error?.response?.data?.message || "Failed to load dashboard data" );
+        } finally {
+            setLoading(false);
+        }
     };
 
     useEffect(() => {
-        (async () => await fetchOwnerData())();
+        fetchOwnerData();
     }, []);
 
     if (loading) {
@@ -54,7 +85,7 @@ export default function OwnerDashboard() {
 
                 {/* Case 1: No Restaurant Setup Profile */}
                 {!restaurant ? (
-                    <RestaurantWizard setRestaurant={setRestaurant} />
+                    <RestaurantWizard setRestaurant={setRestaurant} onSuccess={fetchOwnerData} />
                 ) : restaurant.status === "pending" ? (
                     /* Case 2: Profile Pending Approval */
                     <PendingApproval restaurant={restaurant} />

@@ -61,6 +61,12 @@ export default function Navbar() {
                         >
                             Restaurants
                         </Link>
+                        <Link
+                            to="/credits"
+                            className={`text-sm transition-colors pb-1 border-b-2 cursor-pointer ${location.pathname === "/credits" ? "text-secondary border-secondary" : scrolled || location.pathname !== "/" ? "text-black/55 hover:text-primary border-transparent" : "text-white/80 hover:text-white border-transparent"}`}
+                        >
+                            Credits
+                        </Link>
                         <button
                             onClick={handleDashboardClick}
                             className={`text-sm transition-colors pb-1 border-b-2 border-transparent cursor-pointer text-left ${location.pathname === "/dashboard" ? "text-secondary border-secondary" : scrolled || location.pathname !== "/" ? "text-black/55 hover:text-primary" : "text-white/80 hover:text-white"}`}
@@ -166,6 +172,9 @@ export default function Navbar() {
                     </Link>
                     <Link to="/search" className="text-base text-on-surface hover:text-primary">
                         Restaurants
+                    </Link>
+                    <Link to="/credits" className="text-base text-on-surface hover:text-primary">
+                        Credits
                     </Link>
                     <button
                         onClick={handleDashboardClick}

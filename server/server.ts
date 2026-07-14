@@ -31,14 +31,17 @@ app.use("/api/owners", ownerRouter);
 app.use("/api/admin", adminRouter);
 
 // Global Error Handler
-app.use((err:Error, req:Request, res:Response, next:NextFunction)=>{
-    console.error("Unhandle Error",err);
-    res.status(500).json({
-        message: err.message ||"Internalserver Error",
-        stack:process.env.NODE_ENV ==="production"? undefined : err.stack,
-    })
+app.use((err: unknown, req: Request, res: Response, next: NextFunction) => {
+    console.error("Unhandled Error", err);
 
-})
+    const message = err instanceof Error ? err.message : "Internal Server Error";
+    const stack = err instanceof Error ? err.stack : undefined;
+
+    res.status(500).json({
+        message,
+        stack: process.env.NODE_ENV === "production" ? undefined : stack,
+    });
+});
 
 
 

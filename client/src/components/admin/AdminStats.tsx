@@ -9,10 +9,10 @@ export default function AdminStats({ stats }: AdminStatsProps) {
     if (!stats) return null;
 
     const kpiCards = [
-        { title: "Active Diners", value: stats.users?.totalUsers, icon: Users },
-        { title: "Partners", value: stats.users?.totalOwners, icon: ShieldCheck },
-        { title: "Total Venues", value: stats.restaurants?.total, icon: Utensils },
-        { title: "Bookings", value: stats.bookings?.total, icon: Calendar },
+        { title: "Active Diners", value: stats.totalUsers ?? 0, icon: Users },
+        { title: "Partners", value: stats.totalOwners ?? 0, icon: ShieldCheck },
+        { title: "Total Venues", value: stats.totalRestaurants ?? 0, icon: Utensils },
+        { title: "Bookings", value: stats.totalBookings ?? 0, icon: Calendar },
     ];
 
     return (
@@ -34,7 +34,7 @@ export default function AdminStats({ stats }: AdminStatsProps) {
             <div className="space-y-4">
                 <h3 className="font-display text-lg font-medium text-primary">Recent Bookings Activity</h3>
 
-                {stats.latestBookings?.length === 0 ? (
+                {!stats.latestBookings?.length ? (
                     <p className="text-xs text-black/40 italic">No bookings recorded on the platform.</p>
                 ) : (
                     <div className="bg-white border border-outline-variant/20 rounded-md overflow-hidden shadow-sm">

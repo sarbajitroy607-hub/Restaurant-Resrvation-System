@@ -9,19 +9,18 @@ import {time} from "node:console"
 // Get all restaurants with search and filters
 // GET /api/restaurants
 
-export const getResturants = async (
+export const getRestaurants = async (
     req: Request,
     res: Response
 ): Promise<void> => {
     try {
         const {
             search,
-            minPrice,
-            maxPrice,
             rating,
             location,
-            sortBy,
-            order
+            cuisine,
+            priceRange,
+            sort
         } = req.query;
 
         const filter: any = {};
@@ -34,17 +33,10 @@ export const getResturants = async (
             };
         }
 
-        // Price range filter
-        if (minPrice || maxPrice) {
-            filter.price = {};
-
-            if (minPrice) {
-                filter.price.$gte = Number(minPrice);
-            }
-
-            if (maxPrice) {
-                filter.price.$lte = Number(maxPrice);
-            }
+        // Price range filter - filter by priceRange symbols directly
+        if (priceRange) {
+            const ranges = Array.isArray(priceRange) ? priceRange : [priceRange];
+            filter.priceRange = { $in: ranges };
         }
 
         // Rating filter
@@ -62,20 +54,38 @@ export const getResturants = async (
             };
         }
 
+        // Cuisine filter
+        if (cuisine) {
+            const cuisines = (Array.isArray(cuisine) ? cuisine : [cuisine])
+                .filter((value): value is string => typeof value === "string");
+
+            if (cuisines.length === 0) {
+                res.status(400).json({ message: "Cuisine must be a string" });
+                return;
+            }
+
+            filter.cuisine = {
+                $in: cuisines.map(c => new RegExp( c, "i"))
+            };
+        }
+
 
         // Sorting
-        let sort: any = {};
+        let sortObj: any = { createdAt: -1 };  // default sort
 
-        if (sortBy) {
-            sort[sortBy as string] = order === "desc" ? -1 : 1;
-        } else {
-            sort.createdAt = -1; // latest first
+        if (sort) {
+            const sortStr = String(sort).toLowerCase().trim();
+            if (sortStr === "price_low") {
+                sortObj = { priceRange: 1 };  // $ comes before $$$$
+            } else if (sortStr === "price_high") {
+                sortObj = { priceRange: -1 };  // $$$$ comes before $
+            }
         }
 
 
         const restaurants = await Restaurant
             .find(filter)
-            .sort(sort);
+            .sort(sortObj);
 
 
         res.status(200).json({
@@ -99,7 +109,7 @@ export const getResturants = async (
 // Get featured and exclusive restaurants
 // GET /api/restaurants/featured
 
-export const getFeaturedtResturants = async (
+export const getFeaturedRestaurants = async (
     req: Request,
     res: Response
 ): Promise<void> => {

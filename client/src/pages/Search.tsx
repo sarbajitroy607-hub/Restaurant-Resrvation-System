@@ -6,7 +6,8 @@ import Footer from "../components/Footer.tsx";
 import RestaurantCard from "../components/RestaurantCard.tsx";
 import AuthModal from "../components/AuthModal.tsx";
 import { SlidersHorizontal, Search as SearchIcon, X, Check, MapPin, SearchXIcon } from "lucide-react";
-import { dummyRestaurant } from "../assets/assets.ts";
+import api from "../lib/api.ts";
+import toast from "react-hot-toast";
 
 export default function Search() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -37,8 +38,17 @@ export default function Search() {
 
     useEffect(() => {
         const fetchRestaurants = async () => {
-            setRestaurants(dummyRestaurant);
+           try{
+            setLoading(true);
+            // Just pass the params directly without conversion - backend will handle priceRange
+            const res = await api.get(`/restaurants?${searchParams.toString()}`);
+            setRestaurants(res.data.restaurants || []);
             setLoading(false);
+           } catch (error) {
+            console.error("Failed to fetch restaurants:", error);
+            toast.error("Failed to fetch restaurants. Please try again later.");
+            setLoading(false);
+           }
         };
 
         fetchRestaurants();

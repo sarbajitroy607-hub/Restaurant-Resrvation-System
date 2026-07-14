@@ -1,0 +1,123 @@
+﻿
+> server@1.0.0 build
+> tsc
+
+dist/config/db.ts(4,45): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+dist/controllers/adminControler.ts(6,41): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/adminControler.ts(6,46): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/adminControler.ts(16,22): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/adminControler.ts(22,41): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/adminControler.ts(22,46): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/adminControler.ts(47,22): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/adminControler.ts(53,37): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/adminControler.ts(53,42): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/adminControler.ts(74,22): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/authController.ts(5,24): error TS7006: Parameter 'id' implicitly has an 'any' type.
+dist/controllers/authController.ts(14,36): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/authController.ts(14,41): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/authController.ts(36,13): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'phone' does not exist in type '{ createdAt?: DateQueryTypeCasting | undefined; updatedAt?: DateQueryTypeCasting | undefined; _id?: ObjectIdQueryTypeCasting | undefined; name?: string | ... 1 more ... | undefined; email?: string | ... 1 more ... | undefined; password?: string | ... 1 more ... | undefined; role?: "admin" | ... 3 more ... | undefine...'.
+dist/controllers/authController.ts(40,23): error TS2339: Property '_id' does not exist on type 'never'.
+dist/controllers/authController.ts(41,24): error TS2339: Property 'name' does not exist on type 'never'.
+dist/controllers/authController.ts(42,25): error TS2339: Property 'email' does not exist on type 'never'.
+dist/controllers/authController.ts(43,25): error TS2339: Property 'phone' does not exist on type 'never'.
+dist/controllers/authController.ts(44,24): error TS2339: Property 'role' does not exist on type 'never'.
+dist/controllers/authController.ts(45,39): error TS2339: Property '_id' does not exist on type 'never'.
+dist/controllers/authController.ts(51,22): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/authController.ts(57,33): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/authController.ts(57,38): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/authController.ts(84,25): error TS2339: Property 'phone' does not exist on type 'Document<unknown, {}, { name: string; email: string; password: string; role: "admin" | "owner" | "user"; } & DefaultTimestampProps, { id: string; }, { timestamps: true; }> & Omit<...> & HydratedDocumentOverrides<...>'.
+dist/controllers/authController.ts(92,22): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/authController.ts(99,29): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/authController.ts(99,34): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/authController.ts(112,22): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/bookingController.ts(6,37): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/bookingController.ts(6,42): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/bookingController.ts(55,13): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'specialRequest' does not exist in type '{ createdAt?: DateQueryTypeCasting | undefined; updatedAt?: DateQueryTypeCasting | undefined; _id?: ObjectIdQueryTypeCasting | undefined; ... 7 more ...; totalSlots?: number | undefined; }'.
+dist/controllers/bookingController.ts(59,48): error TS2339: Property 'populate' does not exist on type 'never'.
+dist/controllers/bookingController.ts(71,22): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/bookingController.ts(78,37): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/bookingController.ts(78,42): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/bookingController.ts(91,22): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/bookingController.ts(98,38): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/bookingController.ts(98,43): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/bookingController.ts(121,22): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/ownerController.ts(7,28): error TS7006: Parameter 'fileBuffer' implicitly has an 'any' type.
+dist/controllers/ownerController.ts(21,44): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/ownerController.ts(21,49): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/ownerController.ts(37,45): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/ownerController.ts(37,50): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/ownerController.ts(78,24): error TS18046: 'result' is of type 'unknown'.
+dist/controllers/ownerController.ts(113,45): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/ownerController.ts(113,50): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/ownerController.ts(148,32): error TS18046: 'result' is of type 'unknown'.
+dist/controllers/ownerController.ts(160,40): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/ownerController.ts(160,45): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/ownerController.ts(177,43): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/ownerController.ts(177,48): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/restaurantController.ts(7,38): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/restaurantController.ts(7,43): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/restaurantController.ts(13,20): error TS2339: Property 'name' does not exist on type '{}'.
+dist/controllers/restaurantController.ts(21,20): error TS2339: Property 'priceRange' does not exist on type '{}'.
+dist/controllers/restaurantController.ts(25,20): error TS2339: Property 'rating' does not exist on type '{}'.
+dist/controllers/restaurantController.ts(31,20): error TS2339: Property 'location' does not exist on type '{}'.
+dist/controllers/restaurantController.ts(44,20): error TS2339: Property 'cuisine' does not exist on type '{}'.
+dist/controllers/restaurantController.ts(53,29): error TS2353: Object literal may only specify known properties, and 'priceRange' does not exist in type '{ createdAt: number; }'.
+dist/controllers/restaurantController.ts(56,29): error TS2353: Object literal may only specify known properties, and 'priceRange' does not exist in type '{ createdAt: number; }'.
+dist/controllers/restaurantController.ts(61,19): error TS2345: Argument of type '{ createdAt: number; }' is not assignable to parameter of type 'string | [string, SortOrder][] | Record<string, { $meta: any; } | SortOrder> | null | undefined'.
+  Type '{ createdAt: number; }' is not assignable to type 'Record<string, { $meta: any; } | SortOrder>'.
+    Property 'createdAt' is incompatible with index signature.
+      Type 'number' is not assignable to type '{ $meta: any; } | SortOrder'.
+dist/controllers/restaurantController.ts(72,22): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/restaurantController.ts(78,46): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/restaurantController.ts(78,51): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/restaurantController.ts(96,22): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/restaurantController.ts(102,43): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/restaurantController.ts(102,48): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/restaurantController.ts(115,55): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+dist/controllers/restaurantController.ts(139,41): error TS18046: 'error' is of type 'unknown'.
+dist/controllers/restaurantController.ts(144,49): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/controllers/restaurantController.ts(144,54): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/controllers/restaurantController.ts(181,41): error TS18046: 'error' is of type 'unknown'.
+dist/middlewares/auth.ts(3,31): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/middlewares/auth.ts(3,36): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/middlewares/auth.ts(3,41): error TS7006: Parameter 'next' implicitly has an 'any' type.
+dist/middlewares/auth.ts(11,43): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+dist/middlewares/auth.ts(12,108): error TS2339: Property 'id' does not exist on type 'never'.
+dist/middlewares/auth.ts(27,48): error TS2339: Property 'message' does not exist on type '{}'.
+dist/middlewares/auth.ts(30,27): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/middlewares/auth.ts(30,32): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/middlewares/auth.ts(30,37): error TS7006: Parameter 'next' implicitly has an 'any' type.
+dist/middlewares/auth.ts(38,27): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/middlewares/auth.ts(38,32): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/middlewares/auth.ts(38,37): error TS7006: Parameter 'next' implicitly has an 'any' type.
+dist/models/Booking.ts(15,15): error TS2339: Property 'bookingId' does not exist on type 'Document<unknown, {}, { user: ObjectId; restaurant: ObjectId; date: NativeDate; time: string; guests: number; occasion?: string | null | undefined; status: "cancelled" | "completed" | "confirmed"; totalSlots: number; } & DefaultTimestampProps, { ...; }, Omit<...> & { ...; }> & Omit<...> & HydratedDocumentOverrides<....'.
+dist/models/Booking.ts(16,14): error TS2339: Property 'bookingId' does not exist on type 'Document<unknown, {}, { user: ObjectId; restaurant: ObjectId; date: NativeDate; time: string; guests: number; occasion?: string | null | undefined; status: "cancelled" | "completed" | "confirmed"; totalSlots: number; } & DefaultTimestampProps, { ...; }, Omit<...> & { ...; }> & Omit<...> & HydratedDocumentOverrides<....'.
+dist/models/user.ts(11,16): error TS2790: The operand of a 'delete' operator must be optional.
+dist/seed.ts(11,32): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+dist/seed.ts(26,13): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'phone' does not exist in type '{ createdAt?: DateQueryTypeCasting | undefined; updatedAt?: DateQueryTypeCasting | undefined; _id?: ObjectIdQueryTypeCasting | undefined; name?: string | ... 1 more ... | undefined; email?: string | ... 1 more ... | undefined; password?: string | ... 1 more ... | undefined; role?: "admin" | ... 3 more ... | undefine...'.
+dist/seed.ts(34,13): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'phone' does not exist in type '{ createdAt?: DateQueryTypeCasting | undefined; updatedAt?: DateQueryTypeCasting | undefined; _id?: ObjectIdQueryTypeCasting | undefined; name?: string | ... 1 more ... | undefined; email?: string | ... 1 more ... | undefined; password?: string | ... 1 more ... | undefined; role?: "admin" | ... 3 more ... | undefine...'.
+dist/seed.ts(42,13): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'phone' does not exist in type '{ createdAt?: DateQueryTypeCasting | undefined; updatedAt?: DateQueryTypeCasting | undefined; _id?: ObjectIdQueryTypeCasting | undefined; name?: string | ... 1 more ... | undefined; email?: string | ... 1 more ... | undefined; password?: string | ... 1 more ... | undefined; role?: "admin" | ... 3 more ... | undefine...'.
+dist/seed.ts(153,30): error TS2339: Property '_id' does not exist on type 'never'.
+dist/seed.ts(163,46): error TS18046: 'error' is of type 'unknown'.
+dist/server.ts(25,10): error TS7006: Parameter 'err' implicitly has an 'any' type.
+dist/server.ts(25,15): error TS7006: Parameter 'req' implicitly has an 'any' type.
+dist/server.ts(25,20): error TS7006: Parameter 'res' implicitly has an 'any' type.
+dist/server.ts(25,25): error TS7006: Parameter 'next' implicitly has an 'any' type.

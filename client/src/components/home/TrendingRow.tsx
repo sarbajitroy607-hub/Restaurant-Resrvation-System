@@ -9,6 +9,8 @@ interface TrendingRowProps {
 }
 
 export default function TrendingRow({ trending, loading }: TrendingRowProps) {
+    const visibleTrending = Array.isArray(trending) ? trending : [];
+
     return (
         <section className="py-24 bg-surface-container-low/50">
             <div className="max-w-7xl mx-auto px-6 md:px-10">
@@ -31,9 +33,13 @@ export default function TrendingRow({ trending, loading }: TrendingRowProps) {
                     <div className="flex justify-center py-16">
                         <div className="w-8 h-8 border-2 border-outline-variant/30 border-t-secondary rounded-full animate-spin"></div>
                     </div>
+                ) : visibleTrending.length === 0 ? (
+                    <div className="rounded-2xl border border-outline-variant/30 bg-white/60 px-6 py-10 text-center text-sm text-black/55">
+                        No featured restaurants available right now.
+                    </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {trending.slice(0, 3).map((r) => (
+                        {visibleTrending.slice(0, 3).map((r) => (
                             <RestaurantCard key={r._id} restaurant={r} />
                         ))}
                     </div>

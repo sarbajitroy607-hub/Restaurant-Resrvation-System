@@ -4,14 +4,15 @@ import { Link } from "react-router-dom";
 import { useAppContext } from "../context/AppContext.tsx";
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
+import Loader from "../components/Loader.tsx";
 import RestaurantCard from "../components/RestaurantCard.tsx";
 import AuthModal from "../components/AuthModal.tsx";
 import { CalendarIcon, UsersIcon, ClockIcon, MapPinIcon, CalendarDaysIcon } from "lucide-react";
 import toast from "react-hot-toast";
-import { dummyFeaturedRestaurants, dummyMyBookingsData } from "../assets/assets.ts";
+import api from "../lib/api.ts";
 
 export default function Dashboard() {
-    const { user } = useAppContext();
+    const { user, loading } = useAppContext();
 
     const [bookings, setBookings] = useState<any[]>([]);
     const [recommendations, setRecommendations] = useState<any[]>([]);
@@ -20,8 +21,18 @@ export default function Dashboard() {
     // Fetch user bookings
     useEffect(() => {
         const fetchBookings = async () => {
-            setBookings(dummyMyBookingsData);
-            setLoadingBookings(false);
+            try {
+                setLoadingBookings(true);
+                const res = await api.get("/bookings/my");
+                setBookings(res.data.bookings || []);
+
+            }
+            catch (error: any) {
+                toast.error(error.response?.data?.message || "Failed to load bookings. Please try again.");
+            } finally {
+                setLoadingBookings(false);
+            }
+
         };
 
         if (user) {
@@ -32,7 +43,14 @@ export default function Dashboard() {
     // Fetch generic recommendations
     useEffect(() => {
         const fetchRecommendations = async () => {
-            setRecommendations(dummyFeaturedRestaurants);
+           try{
+            const res = await api.get("/restaurants/featured");
+            setRecommendations(res.data);
+
+           } catch (error: any) {
+            toast.error(error.response?.data?.message || "Failed to load recommendations. Please try again.");
+           }
+
         };
         fetchRecommendations();
     }, []);
@@ -43,13 +61,17 @@ export default function Dashboard() {
         }
 
         try {
-            setBookings((prev) => prev.map((b) => (b._id === bookingId ? { ...b, status: "cancelled" } : b)));
+            
+            await api.put(`/bookings/${bookingId}/cancel`);
+            // update local state
+            setBookings((prev) =>prev.map((b) =>(b._id === bookingId ? {...b, status:"cancelled"}: b )))
             toast.success("Reservation cancelled successfully.");
         } catch (error: any) {
             toast.error(error?.response?.data?.message || error?.message);
         }
     };
 
+    if (loading) return <Loader text="Loading Dashboard..." />;
     if (!user) return null;
 
     // Filter bookings into upcoming and past
