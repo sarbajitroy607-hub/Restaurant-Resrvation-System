@@ -218,8 +218,7 @@ export const getOwnerBookings = async (req, res) => {
             .sort({ date: -1, time: -1 })
             .lean();
         // Keep the owner endpoint aligned with the customer bookings endpoint.
-        // A stable object response prevents the client from treating a valid
-        // empty result as an invalid payload.
+        // This gives both dashboards the same predictable response shape.
         res.status(200).json({ bookings });
     }
     catch (error) {

@@ -18,7 +18,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT || 5000;
+// Vercel reuses a function instance across requests when possible. This
+// middleware ensures each fresh instance has an active database connection.
+app.use(async (_req, _res, next) => {
+    try {
+        await connectDB();
+        next();
+    } catch (error) {
+        next(error);
+    }
+});
 
 app.get("/", (req: Request, res: Response) => {
     res.send("Server is Live!");
@@ -45,18 +54,13 @@ app.use((err: unknown, req: Request, res: Response, next: NextFunction) => {
 
 
 
-const startServer = async () => {
-    try {
-        await connectDB();
+// Vercel imports this Express app as a serverless function. Keep the listener
+// exclusively for local development.
+if (!process.env.VERCEL) {
+    const port = process.env.PORT || 5000;
+    app.listen(port, () => {
+        console.log(`Server running at http://localhost:${port}`);
+    });
+}
 
-        app.listen(port, () => {
-            console.log(`Server running at http://localhost:${port}`);
-        });
-
-    } catch (error) {
-        console.log("Database connection failed:", error);
-        process.exit(1);
-    }
-};
-
-startServer();
+export default app;
